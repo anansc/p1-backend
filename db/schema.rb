@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_09_044552) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_09_062416) do
   create_table "houses", force: :cascade do |t|
     t.string "name", null: false
     t.string "address"
@@ -57,6 +57,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_09_044552) do
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest", default: "", null: false
   end
 
   add_foreign_key "invites", "houses"
